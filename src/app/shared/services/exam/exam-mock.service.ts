@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 import { ICourse } from '../../interfaces/course';
 import { IInstructor } from '../../interfaces/instructor';
-import { ExamService } from './exam.service';
 import { coursesMock } from '../../mocks/course.mock';
 import { instructorMock } from '../../mocks/instructor.mock';
+import { ExamService } from './exam.service';
 
 @Injectable({
   providedIn: 'root'

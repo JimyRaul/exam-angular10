@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ICourse } from '../../interfaces/course';
-import { ExamService } from '../../services/exam/exam.service';
+import { ICourse } from 'src/app/shared/interfaces/course';
+import { ExamService } from 'src/app/shared/services/exam/exam.service';
 
 @Component({
   selector: 'app-course-container',

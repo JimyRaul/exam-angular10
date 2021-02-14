@@ -6,7 +6,9 @@ import { CourseContainerComponent } from './Components/course-container/course-c
 import { CourseComponent } from './Components/course/course.component';
 import { FormMessageErrorComponent } from './components/form-message-error/form-message-error.component';
 import { ExamMockService } from './services/exam/exam-mock.service';
+import { ExamApiService } from './services/exam/exam-api.service';
 import { ExamService } from './services/exam/exam.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { ExamService } from './services/exam/exam.service';
   providers: [
     {
       provide: ExamService,
-      useClass: ExamMockService
+      useClass: ExamApiService
     }
   ]
 })
