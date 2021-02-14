@@ -19,7 +19,7 @@ export const coursesMock: ICourse[] = [
     {
         id: 2,
         name: 'Python Avanzado',
-        featured: true,
+        featured: false,
         image: 'http://examen-nh.jcramireztello.com/media/books/dajngo.png',
         language: 'es',
         price: 8000,
@@ -34,7 +34,7 @@ export const coursesMock: ICourse[] = [
     {
         id: 3,
         name: 'Curso de Diseño UX',
-        featured: true,
+        featured: false,
         image: 'http://examen-nh.jcramireztello.com/media/books/ux.jpeg',
         language: 'es',
         price: 4500,
@@ -49,7 +49,7 @@ export const coursesMock: ICourse[] = [
     {
         id: 4,
         name: 'Administracion de Base de datos Oracle',
-        featured: false,
+        featured: true,
         image: 'http://examen-nh.jcramireztello.com/media/books/oracle.png',
         language: 'es',
         price: 6000,
@@ -109,7 +109,7 @@ export const coursesMock: ICourse[] = [
     {
         id: 8,
         name: 'Desarrollo Frontend con React',
-        featured: false,
+        featured: true,
         image: 'http://examen-nh.jcramireztello.com/media/books/react.png',
         language: 'en',
         price: 6800,

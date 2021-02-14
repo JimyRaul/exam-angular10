@@ -29,4 +29,4 @@ export const instructorMock: IInstructor[] = [
       educationTitle: 'Fullstack Expert',
       image: 'http://examen-nh.jcramireztello.com/media/instructor/03.jpg'
     }
-  ]
+  ];

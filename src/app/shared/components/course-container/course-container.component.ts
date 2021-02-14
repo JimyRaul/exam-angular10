@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ICourse } from '../../interfaces/course';
+import { ExamService } from '../../services/exam/exam.service';
 
 @Component({
   selector: 'app-course-container',
@@ -9,13 +11,26 @@ export class CourseContainerComponent implements OnInit {
 
   @Input() isFeatured = false;
   @Input() showCourses = 3;
+  courses: ICourse[];
   classShowBook: number;
-  constructor() { }
+  constructor(
+    private examService: ExamService
+  ) { }
 
   ngOnInit(): void {
     this.fetchCourses();
     this.classShowBook = 12 / this.showCourses;
   }
 
-  fetchCourses(): void {}
+  fetchCourses(): void {
+    if (this.isFeatured) {
+      this.examService.getFeaturedCourses().subscribe(
+        cursos => this.courses = cursos
+      );
+    } else {
+      this.examService.getCourses().subscribe(
+        cursos => this.courses = cursos
+      );
+    }
+  }
 }

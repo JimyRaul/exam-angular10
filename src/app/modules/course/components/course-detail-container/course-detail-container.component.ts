@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ICourse } from 'src/app/shared/interfaces/course';
+import { ExamService } from 'src/app/shared/services/exam/exam.service';
 
 @Component({
   selector: 'app-course-detail-container',
@@ -8,12 +10,18 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CourseDetailContainerComponent implements OnInit {
 
   @Input() courseId: number;
-  constructor() { }
+  @Input() course: ICourse;
+  constructor(
+    private examService: ExamService
+  ) { }
 
   ngOnInit(): void {
     this.fetchCourse();
   }
 
   fetchCourse(): void {
+    this.examService.getCourse(this.courseId).subscribe(
+      course => this.course = course
+    );
   }
 }

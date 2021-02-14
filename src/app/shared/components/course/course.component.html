@@ -1,14 +1,16 @@
-<img src="http://examen-nh.jcramireztello.com/media/books/angular10.png" width="100%" height="auto">
-<a [routerLink]="['/courses', '1']">Nombre Libro</a>
+<div style="background-color: white;">
+    <img [src]="course.image"  width="100%" height="auto">
+    <a [routerLink]="['/courses', course.id]"> {{ course.name }} </a>
 
-<div class="row">
-    <div class="col-sm">
-    students
-    </div>
-    <div class="col-sm">
-    hours
-    </div>
-    <div class="col-sm">
-    lessons
+    <div class="row">
+        <div class="col-md">
+            <i class="bi bi-people-fill"></i> {{ course.students }}
+        </div>
+        <div class="col-md">
+            <i class="bi bi-book"></i> {{ course.duration }}
+        </div>
+        <div class="col-md">
+            <i class="bi bi-book"></i> {{ course.lessons }}
+        </div>
     </div>
 </div>

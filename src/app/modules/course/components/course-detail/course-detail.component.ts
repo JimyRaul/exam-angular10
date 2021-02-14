@@ -8,8 +8,8 @@ import { ICourse } from 'src/app/shared/interfaces/course';
 })
 export class CourseDetailComponent implements OnInit {
 
-  @Input() courseId: number;
-  course: ICourse;
+  // courseId: number;
+  @Input()course: ICourse;
   constructor() { }
 
   ngOnInit(): void {
