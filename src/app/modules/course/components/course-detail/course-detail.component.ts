@@ -13,9 +13,7 @@ export class CourseDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.fetchCourse();
   }
 
-  fetchCourse(): void {
-  }
+
 }
