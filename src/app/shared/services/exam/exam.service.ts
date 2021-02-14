@@ -24,6 +24,10 @@ export class ExamService implements IExamService{
     return;
   }
 
+  suscribeNews(email: string): Observable<any>{
+    return;
+  }
+
 
   // Instructores
   getInstructors(): Observable<IInstructor[]>{

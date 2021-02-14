@@ -1,4 +1,5 @@
 import { Observable } from 'rxjs';
+import { tap, map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpBackend } from '@angular/common/http';
 import { ICourse } from '../../interfaces/course';
@@ -33,5 +34,13 @@ export class ExamApiService extends ExamService {
 
    getInstructors(): Observable<IInstructor[]>{
     return this.http.get<IInstructor[]>(`${this.apiUrl}/instructor/`);
+   }
+
+   suscribeNews(email: string): Observable<any>{
+    return this.http.post<any>(`${this.apiUrl}/contacts/news/`, { 'email': email}).pipe(
+      map((data) => {
+        return data;
+      })
+    );
    }
 }
