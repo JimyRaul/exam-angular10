@@ -32,6 +32,6 @@ export class ExamApiService extends ExamService {
    }
 
    getInstructors(): Observable<IInstructor[]>{
-     return;
+    return this.http.get<IInstructor[]>(`${this.apiUrl}/instructor/`);
    }
 }
