@@ -1,3 +1,27 @@
-<app-course-container></app-course-container>
-<app-instructor-container></app-instructor-container>
-<p>home-page works!</p>
+
+<div class="bg-dark">
+    <div>
+        <img src="/assets/images/bannerHome.png" class="img-fluid" style="max-width: 100%; height: auto; width: 100%;"/>
+    </div>
+    <div class="container p-4">
+        <p class="text-center h6" style="color: orangered;">Popular Courses</p>
+        <p class="text-center h1" style="color: orangered;">Available Courses</p>
+    </div>
+    <div class="container p-4">
+        <app-course-container [isFeatured]="true"></app-course-container>        
+    </div>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col text-center">
+                <button type="button" class="btn btn-outline-info">VIEW ALL COURSES <i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>        
+    </div>
+</div>
+
+<div style="background-color: aliceblue;">
+    <div class="container p-4">
+        <app-instructor-container></app-instructor-container>
+    </div>
+</div>
+

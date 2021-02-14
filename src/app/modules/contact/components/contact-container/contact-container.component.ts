@@ -12,4 +12,5 @@ export class ContactContainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onsubmit(): void {}
 }

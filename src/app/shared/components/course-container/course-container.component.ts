@@ -9,9 +9,13 @@ export class CourseContainerComponent implements OnInit {
 
   @Input() isFeatured = false;
   @Input() showCourses = 3;
+  classShowBook: number;
   constructor() { }
 
   ngOnInit(): void {
+    this.fetchCourses();
+    this.classShowBook = 12 / this.showCourses;
   }
 
+  fetchCourses(): void {}
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ICourse } from 'src/app/shared/interfaces/course';
 
 @Component({
   selector: 'app-course-detail',
@@ -8,9 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CourseDetailComponent implements OnInit {
 
   @Input() courseId: number;
+  course: ICourse;
   constructor() { }
 
   ngOnInit(): void {
+    this.fetchCourse();
   }
 
+  fetchCourse(): void {
+  }
 }

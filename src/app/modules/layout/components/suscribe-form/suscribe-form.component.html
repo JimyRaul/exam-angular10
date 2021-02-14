@@ -1,1 +1,9 @@
-<p>suscribe-form works!</p>
+<form [formGroup]="suscribeForm" (ngSubmit)="toSuscribe(suscribeForm)">
+    <div class="input-group mb-3">
+        <input type="email" formControlName="email" class="form-control" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button"><i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+    <app-form-message-error [control]="email"></app-form-message-error>
+</form>

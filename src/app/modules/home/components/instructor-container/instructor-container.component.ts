@@ -10,6 +10,9 @@ export class InstructorContainerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.fetchInstructor();
   }
 
+  fetchInstructor(): void {
+  }
 }

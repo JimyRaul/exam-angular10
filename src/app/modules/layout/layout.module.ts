@@ -6,6 +6,8 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SuscribeFormComponent } from './components/suscribe-form/suscribe-form.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,8 +18,10 @@ import { SuscribeFormComponent } from './components/suscribe-form/suscribe-form.
     SuscribeFormComponent,
   ],
   imports: [
+    SharedModule,
     CommonModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class LayoutModule { }

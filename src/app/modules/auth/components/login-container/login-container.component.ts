@@ -12,4 +12,9 @@ export class LoginContainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get f(): any {
+    return;
+  }
+
+  onsubmit(): void {}
 }
